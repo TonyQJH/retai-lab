@@ -61,7 +61,7 @@ function renderHero() {
     hero.innerHTML = `
         <div class="container">
             <h1 class="hero-title">${retaiData.labName}</h1>
-            <p class="hero-subtitle mx-auto">Reliable & Trustworthy AI Lab @ CUHK</p>
+            <p class="hero-subtitle mx-auto">Reliable & Trustworthy AI Lab @ CUHK & Fudan University</p>
         </div>
     `;
     // Insert after navbar
@@ -77,7 +77,7 @@ function renderFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = `
         <div class="container">
-            <p class="mb-0">Copyright &copy; ${retaiData.footerYear} ${retaiData.labName} at CUHK</p>
+            <p class="mb-0">Copyright &copy; ${retaiData.footerYear} ${retaiData.labName} at CUHK & Fudan University</p>
         </div>
     `;
     document.body.appendChild(footer);

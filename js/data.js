@@ -3,7 +3,7 @@ const retaiData = {
     labName: "Reliable & Trustworthy AI (ReTAI) Lab",
     footerYear: new Date().getFullYear(),
     about: {
-        text: "Reliable & Trustworthy AI (ReTAI) Lab is a joint research initiative at CUHK co-led by Prof. Irwin King and Prof. Zenglin Xu. We study reliable, secure, and trustworthy AI systems, spanning agentic AI, long-horizon reasoning, evaluation, robustness, and deployment.",
+        text: "Reliable & Trustworthy AI (ReTAI) Lab is a joint research initiative at CUHK and Fudan University co-led by Prof. Irwin King and Prof. Zenglin Xu. We study reliable, secure, and trustworthy AI systems, spanning agentic AI, long-horizon reasoning, evaluation, robustness, and deployment.",
         topics: [
             "Trustworthy Agentic AI and autonomous planning",
             "Long-horizon memory, retrieval, and conflict-aware reranking",
@@ -63,7 +63,7 @@ const retaiData = {
             },
             {
                 name: "Prof. Zenglin Xu",
-                role: "Professor, Department of Computer Science & Engineering, CUHK",
+                role: "Professor, School of Computer Science, Fudan University",
                 img: "assets/img/placeholder_xu.png",
                 links: { homepage: "#", scholar: "#", email: "#" }
             }
