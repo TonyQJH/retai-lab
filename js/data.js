@@ -1,3 +1,4 @@
+console.log("ReTAI Lab: data.js loading...");
 const retaiData = {
     labName: "Reliable & Trustworthy AI (ReTAI) Lab",
     footerYear: new Date().getFullYear(),

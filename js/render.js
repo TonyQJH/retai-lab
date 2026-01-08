@@ -4,6 +4,7 @@ const get = (id) => document.getElementById(id);
 // --- Shared Components ---
 
 function renderNavbar(activePage) {
+    console.log("Rendering Navbar...");
     const nav = document.createElement('nav');
     nav.className = "navbar navbar-expand-lg navbar-light fixed-top";
     nav.innerHTML = `
@@ -38,7 +39,21 @@ function renderNavbar(activePage) {
     document.body.prepend(nav);
 }
 
+function checkData() {
+    if (typeof retaiData === 'undefined') {
+        console.error("CRITICAL: retaiData is not defined. js/data.js might not have loaded.");
+        const err = document.createElement('div');
+        err.className = "alert alert-danger container mt-5 pt-5";
+        err.innerHTML = "<strong>Error:</strong> Content data failed to load. Please check the console.";
+        document.body.appendChild(err);
+        return false;
+    }
+    return true;
+}
+
 function renderHero() {
+    if (!checkData()) return;
+    console.log("Rendering Hero...");
     const hero = document.createElement('header');
     hero.className = "hero-section text-center";
     // Add margin-top to account for fixed navbar
