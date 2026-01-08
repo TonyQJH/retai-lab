@@ -1,76 +1,28 @@
 # Reliable & Trustworthy AI (ReTAI) Lab Website
 
-This repository contains the source code for the ReTAI Lab joint research initiative website, co-led by Prof. Irwin King and Prof. Zenglin Xu at CUHK.
+This is the source code for the ReTAI Lab website. It is a static website built with HTML, CSS (Bootstrap 5), and JavaScript.
 
-## 🚀 Deployment
+## Project Structure
+- `index.html`: Main homepage
+- `news.html`, `team.html`, `pubs.html`: Subpages
+- `js/data.js`: Centralized content data (edit this to update people, news, etc.)
+- `js/render.js`: Logic to render content from data.js
+- `css/styles.css`: Custom academic styling
+- `assets/`: Images and other static assets
 
-This site is designed to be hosted on **GitHub Pages**.
+## Deployment Instructions (GitHub Pages)
 
-### Steps to Deploy:
-1. Go to your GitHub repository **Settings**.
-2. Navigate to the **Pages** section (on the left sidebar).
-3. Under **Build and deployment**, select **Source** as "Deploy from a branch".
-4. Under **Branch**, select `main` (or `master`) and folder `/ (root)`.
-5. Click **Save**.
+1.  Go to the repository **Settings**.
+2.  Navigate to the **Pages** section (on the left sidebar).
+3.  Under **Build and deployment** > **Source**, select **Deploy from a branch**.
+4.  Under **Branch**, select **main** and folder **/(root)**.
+5.  Click **Save**.
 
-The site will be live at `https://<username>.github.io/King_Xu_TrustworthyLab/` (or your custom domain) within a few minutes.
+The site will be live at `https://<username>.github.io/retai-lab/` shortly.
 
-## 🛠 Local Development
+## Updating Content
 
-To preview the site locally:
-
-### Option A: VS Code Live Server (Recommended)
-1. Install the "Live Server" extension in VS Code.
-2. Right-click on `index.html`.
-3. Select "Open with Live Server".
-
-### Option B: Python Simple HTTP Server
-If you have Python installed, run:
-```bash
-python -m http.server 8000
-```
-Then open `http://localhost:8000` in your browser.
-
-## 📝 Editing Content
-
-The website is **data-driven**, making it easy to add new members or publications without touching the HTML.
-
-### To Add People, Publications, or Projects:
-1. Open [`js/data.js`](js/data.js).
-2. Edit the corresponding array:
-   - `PEOPLE` (Faculty, PhD, Research Students)
-   - `PUBLICATIONS`
-   - `PROJECTS` (Open Source)
-   - `RESEARCH_TOPICS`
-
-Example - Adding a new PhD student:
-```javascript
-{
-  name: "New Student Name",
-  role: "PhD Student",
-  affiliation: "CUHK",
-  advisor: "Prof. Irwin King",
-  links: { homepage: "#", scholar: "#", github: "#" }
-},
-```
-
-### To Change Text Content:
-- **General Page Text**: Edit [`index.html`](index.html) directly (e.g., About section text, Join Us calls to action).
-- **Research Pillars**: Edit `RESEARCH_PILLARS` in [`js/data.js`](js/data.js).
-
-### To Change Styles:
-- Edit [`css/styles.css`](css/styles.css).
-- Important colors are defined as variables at the top of the file (e.g., `--color-primary`, `--color-accent`).
-
-## 📁 Project Structure
-
-```
-/
-├── index.html        # Main HTML structure
-├── css/
-│   └── styles.css    # Global styles & responsive design
-├── js/
-│   ├── data.js       # Content data (Edit this for updates!)
-│   └── main.js       # Rendering logic (Don't touch unless adding features)
-└── README.md         # This file
-```
+To update the website content (e.g., adding a new publication or news item):
+1.  Open `js/data.js`.
+2.  Add the new item to the respective array (e.g., `news`, `publications`).
+3.  Commit and push changes. The site will auto-update.
