@@ -224,10 +224,18 @@ function renderHome() {
                     
                     ${p.contact ? `
                     <div class="small mb-3">
+                        ${p.contact.phone ? `
                         <div class="fw-bold">Call:</div> 
                         <div>${p.contact.phone}</div>
+                        ` : ''}
+                        ${p.contact.email ? `
                         <div class="fw-bold mt-2">Email:</div> 
                         <a href="mailto:${p.contact.email}">${p.contact.email}</a>
+                        ` : ''}
+                        ${p.contact.address ? `
+                        <div class="fw-bold mt-2">Address:</div> 
+                        <div>${p.contact.address}</div>
+                        ` : ''}
                     </div>
                     ` : ''}
                     
@@ -249,7 +257,7 @@ function renderHome() {
                     </ul>
                     ` : ''}
 
-                    <a href="${p.links.cv}" class="text-decoration-none fw-bold mb-4 d-inline-block">Download Full CV</a>
+                    ${p.links.cv ? `<a href="${p.links.cv}" class="text-decoration-none fw-bold mb-4 d-inline-block">Download Full CV</a>` : ''}
 
                     ${p.bio ? `
                     <h3 class="h4 text-primary mt-2">Biography</h3>

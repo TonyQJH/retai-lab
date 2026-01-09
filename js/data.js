@@ -57,7 +57,7 @@ const retaiData = {
         pi: [
             {
                 name: "Irwin King",
-                role: "B.Sc. (Caltech), M.Sc., Ph.D. (USC)<br>Pro-Vice-Chancellor (Education)<br>Professor<br>Fellow of ACM, Fellow of IEEE, Fellow of INNS, Fellow of AAAI, Fellow of HKIE",
+                role: "B.Sc. (Caltech), M.Sc., Ph.D. (USC)<br>Pro-Vice-Chancellor (Education)<br>Professor<br>Department of Computer Science and Engineering<br>The Chinese University of Hong Kong<br>Fellow of ACM, Fellow of IEEE, Fellow of INNS, Fellow of AAAI, Fellow of HKIE",
                 contact: {
                     phone: "(+852) 3943 8398",
                     email: "king@cse.cuhk.edu.hk"
@@ -91,10 +91,34 @@ const retaiData = {
                 }
             },
             {
-                name: "Prof. Zenglin Xu",
-                role: "Professor, School of Computer Science, Fudan University",
-                img: "assets/img/placeholder_xu.png",
-                links: { homepage: "#", scholar: "#", email: "#" }
+                name: "Zenglin Xu",
+                role: "Ph.D. (CUHK)<br>Professor<br>AI Innovation and Industry Research Institute<br>School of Computer Science<br>Fudan University",
+                contact: {
+                    email: "zenglinxu@fudan.edu.cn",
+                    address: "Room 308, Computer Building, Zhangjiang Campus, Fudan University"
+                },
+                detailedRoles: [
+                    "Executive Editor, Neural Networks",
+                    "Board Member and Vice-President (Education), International Neural Network Society (INNS)",
+                    "Chair, AI Education Committee, INNS",
+                    "Area Chair / Senior PC Member: NeurIPS, ACL, EMNLP, AAAI, IJCAI",
+                    "Distinguished Student Paper Honorable Mention, AAAI 2015",
+                    "Young Researcher Award, APNNS 2016",
+                    "Stanford's Top 2% Scientists"
+                ],
+                bio: [
+                    "Professor Zenglin Xu is currently a Professor and Ph.D. Supervisor at the School of Computer Science, Fudan University, and the AI Innovation and Industry Research Institute. He obtained his Ph.D. degree in Computer Science & Engineering from The Chinese University of Hong Kong (2005-2009).",
+                    "Prior to joining Fudan University, he held research and teaching positions at Michigan State University, Saarland University & Max Planck Institute for Informatics, Purdue University, University of Electronic Science and Technology of China (UESTC), and Harbin Institute of Technology (Shenzhen).",
+                    "His research interests focus on machine learning theory and applications, specifically scientific AI (AI for Science) and trustworthy AI. His breadth of expertise covers multimodal learning, time series analysis, graph neural networks, large language models, federated learning, and privacy computing.",
+                    "Professor Xu has published over 200 peer-reviewed papers in top-tier journals and conferences such as IEEE TPAMI, TKDE, TNNLS, NeurIPS, and ICML, with over 11,000 citations on Google Scholar. He is an Executive Editor for the journal Neural Networks and serves in leadership roles for the International Neural Network Society (INNS)."
+                ],
+                img: "assets/img/Zenglin Xu.png",
+                links: {
+                    homepage: "https://xuzenglin.github.io/",
+                    scholar: "https://scholar.google.com/citations?user=gF0H9nEAAAAJ&hl=zh-CN",
+                    email: "mailto:zenglinxu@fudan.edu.cn",
+                    linkedin: "https://www.linkedin.com/in/zenglin/"
+                }
             }
         ],
         students: [
