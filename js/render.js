@@ -232,8 +232,8 @@ function renderHome() {
                     ` : ''}
                     
                     <div class="d-flex gap-2">
-                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="d-inline-block"><img src="assets/img/logo/linked_icon.jpg" alt="LinkedIn" style="width: 32px; height: 32px; border-radius: 4px;"></a>` : ''}
-                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="d-inline-block"><img src="assets/img/logo/google_scholar.jpg" alt="Google Scholar" style="width: 32px; height: 32px; border-radius: 2px;"></a>` : ''}
+                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="d-inline-block"><img src="assets/img/logo/linked_icon.jpg" alt="LinkedIn" style="width: 48px; height: 48px; border-radius: 4px;"></a>` : ''}
+                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="d-inline-block"><img src="assets/img/logo/google_scholar.jpg" alt="Google Scholar" style="width: 48px; height: 48px; border-radius: 4px;"></a>` : ''}
                     </div>
                 </div>
 
