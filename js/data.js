@@ -56,7 +56,7 @@ const retaiData = {
     team: {
         pi: [
             {
-                name: "Prof. Irwin King",
+                name: "Irwin King",
                 role: "B.Sc. (Caltech), M.Sc., Ph.D. (USC)<br>Pro-Vice-Chancellor (Education)<br>Professor<br>Fellow of ACM, Fellow of IEEE, Fellow of INNS, Fellow of AAAI, Fellow of HKIE",
                 contact: {
                     phone: "(+852) 3943 8398",
