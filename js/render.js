@@ -68,7 +68,10 @@ function renderHero() {
     hero.style.marginTop = "56px";
     hero.innerHTML = `
         <div class="container">
-            <h1 class="hero-title">${retaiData.labName}</h1>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="height: 80px; margin-right: 15px;">
+                <h1 class="hero-title mb-0">${retaiData.labName}</h1>
+            </div>
             <p class="hero-subtitle mx-auto">Reliable & Trustworthy AI Lab @ CUHK & Fudan University</p>
         </div>
     `;
