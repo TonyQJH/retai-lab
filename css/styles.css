@@ -6,7 +6,12 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #1a1a1a;
     font-weight: 600;
 }
@@ -39,16 +44,18 @@ a:hover {
     margin-left: 1rem;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: #0d6efd !important;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 4rem 0;
+    /* Gradient matching MISC Lab: Cyan/Light Blue -> Periwinkle Blue */
+    background: linear-gradient(90deg, #d3f3ff 0%, #7aaefc 100%);
+    padding: 5rem 0;
     margin-bottom: 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #a8caff;
 }
 
 .hero-title {
@@ -113,13 +120,13 @@ section:nth-of-type(even) {
 /* Cards */
 .card {
     border: 1px solid #eee;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     transition: transform 0.2s;
 }
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .card-img-top-placeholder {

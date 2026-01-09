@@ -68,13 +68,29 @@ function renderHero() {
     hero.style.marginTop = "56px";
     hero.innerHTML = `
         <div class="container">
-            <div class="d-flex justify-content-center align-items-center mb-3">
-                <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="height: 80px; margin-right: 15px;">
-                <h1 class="hero-title mb-0">${retaiData.labName}</h1>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
+                    <!-- Adjusted size to be large like the example -->
+                    <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="width: 100%; max-width: 280px; height: auto;">
+                </div>
+                <div class="col-lg-8 col-md-7 text-center text-md-start">
+                    <!-- High contrast dark title -->
+                    <h1 class="hero-title mb-2" style="font-size: 3.5rem; font-weight: 800; color: #002D62; line-height: 1.1;">Welcome to ReTAI Lab</h1>
+                    <p class="mb-3" style="font-size: 1.75rem; font-weight: 600; color: #1a1a1a;">Reliable & Trustworthy AI Lab</p>
+                    
+                    <!-- Divider line -->
+                    <div style="width: 100%; height: 2px; background-color: rgba(255,255,255,0.7); margin: 1.5rem 0;"></div>
+                    
+                    <!-- Department Info -->
+                    <div style="font-size: 1.15rem; color: #002D62;">
+                        <div>Department of Computer Science & Engineering, The Chinese University of Hong Kong</div>
+                        <div>School of Computer Science, Fudan University</div>
+                    </div>
+                </div>
             </div>
-            <p class="hero-subtitle mx-auto">Reliable & Trustworthy AI Lab @ CUHK & Fudan University</p>
         </div>
     `;
+
     // Insert after navbar
     const nav = document.querySelector('nav');
     if (nav) {
