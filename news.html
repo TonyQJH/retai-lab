@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - ReTAI Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom CSS (Loaded via JS) -->
 </head>
 
 <body>
@@ -14,10 +14,29 @@
     <section id="all-news" class="mt-4"></section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/render.js"></script>
+    <!-- Dynamic Loader -->
     <script>
-        document.addEventListener('DOMContentLoaded', renderNewsPage);
+        (function () {
+            var v = Date.now();
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'css/styles.css?v=' + v;
+            document.head.appendChild(link);
+
+            var scripts = ['js/data.js', 'js/render.js'];
+            var loadNext = function () {
+                if (scripts.length === 0) {
+                    if (typeof renderNewsPage === 'function') renderNewsPage();
+                    return;
+                }
+                var src = scripts.shift();
+                var s = document.createElement('script');
+                s.src = src + '?v=' + v;
+                s.onload = loadNext;
+                document.body.appendChild(s);
+            };
+            loadNext();
+        })();
     </script>
 </body>
 
