@@ -69,22 +69,24 @@ function renderHero() {
     hero.innerHTML = `
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
-                    <!-- Adjusted size to be large like the example -->
-                    <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="width: 100%; max-width: 280px; height: auto;">
+                <!-- Logo Column -->
+                <div class="col-lg-4 col-md-5 mb-4 mb-md-0 d-flex justify-content-center">
+                    <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="width: auto; max-width: 100%; max-height: 220px;">
                 </div>
-                <div class="col-lg-8 col-md-7 text-center text-md-start">
-                    <!-- High contrast dark title -->
-                    <h1 class="hero-title mb-2" style="font-size: 3.5rem; font-weight: 800; color: #002D62; line-height: 1.1;">Welcome to ReTAI Lab</h1>
-                    <p class="mb-3" style="font-size: 1.75rem; font-weight: 600; color: #1a1a1a;">Reliable & Trustworthy AI Lab</p>
+                
+                <!-- Text Column (Centered Layout) -->
+                <div class="col-lg-8 col-md-7 text-center">
+                    <h1 class="hero-title mb-2" style="font-size: 3.2rem; font-weight: 800; color: #000; letter-spacing: -0.5px;">Welcome to ReTAI Lab</h1>
+                    <p class="mb-3" style="font-size: 1.6rem; font-weight: 700; color: #1a1a1a;">Reliable & Trustworthy AI Lab</p>
                     
-                    <!-- Divider line -->
-                    <div style="width: 100%; height: 2px; background-color: rgba(255,255,255,0.7); margin: 1.5rem 0;"></div>
+                    <!-- Centered Divider -->
+                    <div style="width: 80%; max-width: 600px; height: 1px; background-color: rgba(0,0,0,0.2); margin: 1.5rem auto;"></div>
                     
                     <!-- Department Info -->
-                    <div style="font-size: 1.15rem; color: #002D62;">
-                        <div>Department of Computer Science & Engineering, The Chinese University of Hong Kong</div>
-                        <div>School of Computer Science, Fudan University</div>
+                    <div style="font-size: 1.1rem; color: #333; font-weight: 500; line-height: 1.4;">
+                        <div>Department of Computer Science & Engineering</div>
+                        <div>The Chinese University of Hong Kong</div>
+                        <div class="mt-1">School of Computer Science, Fudan University</div>
                     </div>
                 </div>
             </div>

@@ -51,11 +51,11 @@ a:hover {
 
 /* Hero Section */
 .hero-section {
-    /* Gradient matching MISC Lab: Cyan/Light Blue -> Periwinkle Blue */
-    background: linear-gradient(90deg, #d3f3ff 0%, #7aaefc 100%);
+    /* Lighter Cyan to Blue gradient */
+    background: linear-gradient(90deg, #E0FFFF 0%, #87CEFA 100%);
     padding: 5rem 0;
     margin-bottom: 2rem;
-    border-bottom: 1px solid #a8caff;
+    border-bottom: 1px solid #b0c4de;
 }
 
 .hero-title {
