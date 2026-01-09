@@ -71,7 +71,7 @@ function renderHero() {
             <div class="row align-items-center justify-content-center">
                 <!-- Logo Column -->
                 <div class="col-lg-4 col-md-5 mb-4 mb-md-0 d-flex justify-content-center">
-                    <img src="assets/img/retai_logo.png" alt="ReTAI Lab Logo" style="width: auto; max-width: 100%; max-height: 220px;">
+                    <img src="assets/img/logo/retai_logo.png" alt="ReTAI Lab Logo" style="width: auto; max-width: 100%; max-height: 220px;">
                 </div>
                 
                 <!-- Text Column (Centered Layout) -->
@@ -232,8 +232,8 @@ function renderHome() {
                     ` : ''}
                     
                     <div class="d-flex gap-2">
-                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="btn btn-sm btn-primary"><i class="bi bi-linkedin"></i></a>` : ''}
-                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="btn btn-sm btn-info text-white"><i class="bi bi-google"></i></a>` : ''}
+                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="d-inline-block"><img src="assets/img/logo/linked_icon.jpg" alt="LinkedIn" style="width: 32px; height: 32px; border-radius: 4px;"></a>` : ''}
+                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="d-inline-block"><img src="assets/img/logo/google_scholar.jpg" alt="Google Scholar" style="width: 32px; height: 32px; border-radius: 2px;"></a>` : ''}
                     </div>
                 </div>
 
