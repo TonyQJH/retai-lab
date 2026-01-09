@@ -58,8 +58,36 @@ const retaiData = {
             {
                 name: "Prof. Irwin King",
                 role: "B.Sc. (Caltech), M.Sc., Ph.D. (USC)<br>Pro-Vice-Chancellor (Education)<br>Professor<br>Fellow of ACM, Fellow of IEEE, Fellow of INNS, Fellow of AAIA, Fellow of HKIE",
-                img: "assets/img/placeholder_king.png",
-                links: { homepage: "#", scholar: "#", email: "#" }
+                contact: {
+                    phone: "(+852) 3943 8398",
+                    email: "king@cse.cuhk.edu.hk"
+                },
+                detailedRoles: [
+                    "Director, Centre for eLearning Innovation and Technology (ELITE)",
+                    "Director, Rich Media Big Data Analytics and Application Key Laboratory, SZRI",
+                    "PI, The Knowledge and Education Exchange Platform (KEEP) and The VeriGuide Project",
+                    "Associate Editor, Neural Network Journal",
+                    "Associate Editor, International Journal of Data Science and Analytics (JDSA)",
+                    "Associate Editor, ACM Transactions on Knowledge Discovery in Data (ACM TKDD)",
+                    "Associate Editor, AI Journal (AIJ)",
+                    "Associate Editor, Knowledge and Information Systems (KAIS)",
+                    "Associate Editor, Artificial Intelligence Science and Engineering (AISE)",
+                    "Vice-President, The ACM WebConf Steering Committee"
+                ],
+                bio: [
+                    "Professor Irwin King is a distinguished scholar in machine intelligence, currently serving as the Professor of Computer Science & Engineering at The Chinese University of Hong Kong.",
+                    "With a broad range of research interests covering areas such as machine learning, social computing, AI, and data mining, Professor King is a Fellow of prestigious societies and associations, including the IEEE, INNS, AAIA, HKIE, and ACM Fellow. Over the years, he has played many leadership roles in various top conferences and societies.",
+                    "Professor King has been honored with various prestigious awards in recognition of his contributions to the field of machine intelligence, including the 2021 INNS Dennis Gabor Award.",
+                    "Professor King holds a B.Sc. degree in Engineering and Applied Science from the California Institute of Technology (Caltech) and obtained his M.Sc. and Ph.D. degrees in Computer Science from the University of Southern California (USC)."
+                ],
+                img: "assets/img/Irwin-King.jpg",
+                links: {
+                    homepage: "#",
+                    scholar: "https://scholar.google.com/citations?user=MXvC7tkAAAAJ&hl=en",
+                    email: "#",
+                    linkedin: "https://hk.linkedin.com/in/irwinking",
+                    cv: "assets/CV/CV_Prof_Irwin_King_2023.pdf"
+                }
             },
             {
                 name: "Prof. Zenglin Xu",

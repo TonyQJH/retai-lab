@@ -214,33 +214,55 @@ function renderHome() {
     // 5. PIs
     const piSection = get('pi-section');
     if (piSection) {
-        let piCards = retaiData.team.pi.map(p => `
-            <div class="col-md-6 mb-4">
-                 <div class="card person-card">
-                    <!-- Avatar SVG Placeholder -->
-                    <div class="person-avatar">
-                        <svg width="50" height="50" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                        </svg>
+        let piHtml = retaiData.team.pi.map(p => `
+            <div class="row mb-5 border-bottom pb-5">
+                <!-- Left Sidebar -->
+                <div class="col-md-3 bg-light p-4 rounded-3 h-100">
+                    <img src="${p.img}" alt="${p.name}" class="img-fluid rounded mb-3" style="width: 100%; object-fit: cover;">
+                    <h5 class="text-primary fw-bold mb-2">${p.name}</h5>
+                    <div class="small text-muted mb-3">${p.role}</div>
+                    
+                    ${p.contact ? `
+                    <div class="small mb-3">
+                        <div class="fw-bold">Call:</div> 
+                        <div>${p.contact.phone}</div>
+                        <div class="fw-bold mt-2">Email:</div> 
+                        <a href="mailto:${p.contact.email}">${p.contact.email}</a>
                     </div>
-                    <h5>${p.name}</h5>
-                    <p class="person-role">${p.role}</p>
-                    <div class="person-links">
-                        <a href="${p.links.email}">Email</a>
-                        <a href="${p.links.homepage}">Home</a>
-                        <a href="${p.links.scholar}">Scholar</a>
+                    ` : ''}
+                    
+                    <div class="d-flex gap-2">
+                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="btn btn-sm btn-primary"><i class="bi bi-linkedin"></i></a>` : ''}
+                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="btn btn-sm btn-info text-white"><i class="bi bi-google"></i></a>` : ''}
                     </div>
-                 </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-9 ps-md-4 pt-3 pt-md-0">
+                    <h2 class="fw-bold text-dark mb-1">${p.name}</h2>
+                    <div class="text-secondary small mb-3">${p.role.replace(/<br>/g, ', ')}</div>
+                    <div class="mb-3 text-secondary">Department of Computer Science and Engineering The Chinese University of Hong Kong</div>
+
+                    ${p.detailedRoles ? `
+                    <ul class="mb-4">
+                        ${p.detailedRoles.map(role => `<li>${role}</li>`).join('')}
+                    </ul>
+                    ` : ''}
+
+                    <a href="${p.links.cv}" class="text-decoration-none fw-bold mb-4 d-inline-block">Download Full CV</a>
+
+                    ${p.bio ? `
+                    <h3 class="h4 text-primary mt-2">Biography</h3>
+                    ${p.bio.map(para => `<p>${para}</p>`).join('')}
+                    ` : ''}
+                </div>
             </div>
         `).join('');
 
         piSection.innerHTML = `
             <div class="container">
-                <h2 class="section-title">Principal Investigators</h2>
-                <div class="row">
-                    ${piCards}
-                </div>
+                <h2 class="section-title mb-5">Principal Investigators</h2>
+                ${piHtml}
             </div>
         `;
     }
