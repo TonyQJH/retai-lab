@@ -29,13 +29,8 @@ function renderNavbar(activePage) {
                     <li class="nav-item">
                         <a class="nav-link ${activePage === 'news' ? 'active' : ''}" href="news.html">News</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ${activePage === 'team' ? 'active' : ''}" href="#" id="teamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Our Team
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="teamDropdown">
-                            <li><a class="dropdown-item" href="team.html">People</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link ${activePage === 'team' ? 'active' : ''}" href="team.html">Our Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${activePage === 'pubs' ? 'active' : ''}" href="pubs.html">Publications</a>
@@ -280,11 +275,16 @@ function renderHome() {
                 ${group.members.map(m => `
                     <div class="col-md-3 col-sm-6 mb-4">
                         <div class="person-card p-3">
-                             <div class="person-avatar" style="width: 60px; height: 60px;">
-                                <svg width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                                </svg>
+                             <div class="person-avatar mx-auto mb-3" style="width: 80px; height: 80px; overflow: hidden; border-radius: 50%;">
+                                ${m.img ?
+                `<img src="${m.img}" alt="${m.name}" style="width: 100%; height: 100%; object-fit: cover;">` :
+                `<div class="bg-light d-flex align-items-center justify-content-center h-100">
+                                        <svg width="40" height="40" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#adb5bd">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                        </svg>
+                                    </div>`
+            }
                              </div>
                              <h6 class="mb-1">${m.name}</h6>
                              <p class="person-role small mb-2">${m.role}</p>

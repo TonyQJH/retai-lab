@@ -133,11 +133,11 @@ const retaiData = {
             {
                 groupname: "Ph.D. Students (Prof. Irwin King)",
                 members: [
-                    { name: "Dianzhi Yu", role: "Ph.D. Student", links: { homepage: "#", scholar: "#", github: "#" } },
-                    { name: "Muzhi Li", role: "Ph.D. Student", links: { homepage: "#", scholar: "#", github: "#" } },
-                    { name: "Wenqian Cui", role: "Ph.D. Student", links: { homepage: "#", scholar: "#", github: "#" } },
-                    { name: "Jiahong Liu", role: "Ph.D. Student", links: { homepage: "#", scholar: "#", github: "#" } },
-                    { name: "Jinhu Qi", role: "Ph.D. Student", links: { homepage: "#", scholar: "#", github: "#" } }
+                    { name: "Dianzhi Yu", role: "Ph.D. Student", img: "assets/img/people/Dianzhi_Yu.png", links: { homepage: "#", scholar: "#", github: "#" } },
+                    { name: "Muzhi Li", role: "Ph.D. Student", img: "assets/img/people/muzhi_li.jpeg", links: { homepage: "#", scholar: "#", github: "#" } },
+                    { name: "Wenqian Cui", role: "Ph.D. Student", img: "assets/img/people/wenqian_cui.jpg", links: { homepage: "#", scholar: "#", github: "#" } },
+                    { name: "Jiahong Liu", role: "Ph.D. Student", img: "assets/img/people/jiahong_liu.jpeg", links: { homepage: "#", scholar: "#", github: "#" } },
+                    { name: "Jinhu Qi", role: "Ph.D. Student", img: "assets/img/people/Jinhu_QI.jpg", links: { homepage: "#", scholar: "#", github: "#" } }
                 ]
             },
             {
