@@ -164,9 +164,7 @@ function renderHome() {
         let cards = retaiData.researchInterests.map(item => `
             <div class="col-md-4 mb-4">
                 <div class="card topic-card">
-                    <div class="card-img-top-placeholder">
-                        <i class="bi bi-cpu"></i> <!-- Bootstrap Icons placeholder -->
-                    </div>
+                    <img src="${item.img}" class="card-img-top" alt="${item.title}" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">${item.title}</h5>
                         <p class="card-text">${item.desc}</p>
@@ -185,28 +183,23 @@ function renderHome() {
         `;
     }
 
-    // 4. Recent Pubs (Limit 2 groups approx)
+    // 4. Recent Pubs (DBLP Embed)
     const pubsSection = get('pubs-section');
     if (pubsSection) {
-        // Just show all year groups but maybe limit items if list is long? 
-        // For now show all groups as "Recent" is usually the last 2-3 years.
-        let pubHtml = retaiData.publications.map(group => `
-            <h4 class="mt-4 border-bottom pb-2">${group.year}</h4>
-            <ul class="list-unstyled">
-                ${group.items.map(pub => `
-                    <li class="mb-2">
-                        ${pub.text} 
-                        [<a href="${pub.links.pdf}">PDF</a>] 
-                        [<a href="${pub.links.code}">Code</a>]
-                    </li>
-                `).join('')}
-            </ul>
+        // Vertical Stack structure
+        const stackHtml = retaiData.dblpLinks.map(p => `
+            <div class="mb-5">
+                <h3 class="mb-3 ps-3 border-start border-4 border-primary">${p.name}</h3>
+                <div class="ratio ratio-16x9" style="min-height: 800px;">
+                    <iframe src="${p.url}" title="${p.name} DBLP" allowfullscreen style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
+                </div>
+            </div>
         `).join('');
 
         pubsSection.innerHTML = `
             <div class="container">
-                <h2 class="section-title">Recent Publications</h2>
-                ${pubHtml}
+                <h2 class="section-title mb-5">Recent Publications</h2>
+                ${stackHtml}
             </div>
         `;
     }

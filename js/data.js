@@ -13,29 +13,37 @@ const retaiData = {
         ]
     },
     news: [
-        { title: "ReTAI joint-lab page launched", date: "20260109", tag: "Lab" },
-        { title: "Placeholder accepted paper item", date: "2025xxxx", tag: "Paper" },
-        { title: "Placeholder award item", date: "2025xxxx", tag: "Award" },
-        { title: "Placeholder service item", date: "2025xxxx", tag: "Service" },
-        { title: "Placeholder dataset release", date: "2025xxxx", tag: "Dataset" },
-        { title: "Placeholder invited talk", date: "2025xxxx", tag: "Talk" }
+        { date: "2025-11-13", tag: "Paper", title: "One paper accepted to AAAI-26, Singapore" },
+        { date: "2025-10-24", tag: "Award", title: "Amazon Research Award Recognition, Spring 2025" },
+        { date: "2025-10-17", tag: "Service", title: "Prof. Irwin King will serve as the Steering Committee Member for IAIT 2026" },
+        { date: "2025-10-17", tag: "Service", title: "Prof. Irwin King will serve as the Co-Chair of the Awards for IJCNN 2027" },
+        { date: "2025-09-20", tag: "Paper", title: "One paper accepted to NeurIPS 2025 Workshop, San Diego, USA" },
+        { date: "2025-09-20", tag: "Paper", title: "One paper accepted to NeurIPS 2025, San Diego, USA" },
+        { date: "2025-09-18", tag: "Service", title: "Prof. Irwin King accepted as a PC for the Short Papers, WebConf 2026, Dubai" },
+        { date: "2025-09-18", tag: "Service", title: "Prof. Irwin King accepted as an SPC for the Responsible Web Track, WebConf 2026, Dubai" },
+        { date: "2025-09-04", tag: "Paper", title: "One paper accepted to Nature Computational Science, 2025" },
+        { date: "2025-08-28", tag: "Honor", title: "Prof. King included in the 2025 AI 2000 Global Artificial Intelligence Scholars List with Honorable Mention Award" }
     ],
     researchInterests: [
         {
             title: "Trustworthy Agentic AI",
             desc: "Developing autonomous agents that plan, reason, and act reliably in complex, open-ended environments.",
-            img: "assets/img/placeholder_agent.png"
+            img: "assets/img/interest/Trustworthy Agentic AI_image.png"
         },
         {
-            title: "Evaluation & Benchmarks",
-            desc: "Creating rigorous frameworks and benchmarks to stress-test AI models and uncover failure modes.",
-            img: "assets/img/placeholder_eval.png"
+            title: "Social Computing & Graph Intelligence",
+            desc: "Uncovering patterns in social networks and complex systems using advanced graph neural networks and data mining techniques.",
+            img: "assets/img/interest/social_image.png"
         },
         {
-            title: "Robustness & Secure Deployment",
-            desc: "Ensuring AI systems are robust to adversarial attacks and can be deployed securely in real-world settings.",
-            img: "assets/img/placeholder_secure.png"
+            title: "AI for Science & Multimodal Learning",
+            desc: "Accelerating scientific discovery through multimodal large language models and robust time-series analysis.",
+            img: "assets/img/interest/aiScience_image.jpg"
         }
+    ],
+    dblpLinks: [
+        { name: "Prof. Irwin King", url: "https://dblp.org/pid/k/IrwinKing.html" },
+        { name: "Prof. Zenglin Xu", url: "https://dblp.org/pid/68/1538.html" }
     ],
     publications: [
         {
@@ -79,9 +87,9 @@ const retaiData = {
                     "His extensive research interests encompass a wide range of areas, including trustworthy AI, machine learning, social computing, AI, and data mining. Professor King is a Fellow of esteemed societies and associations, such as the ACM, IEEE, INNS, AAAI, and HKIE. Throughout his career, he has assumed various leadership roles in numerous prominent conferences and societies. Notably, he held the position of President of the International Neural Network Society, General Co-chair for conferences such as WebConf 2020, ICONIP 2020, ACML 2015, RecSys 2013, and WSDM 2011. Additionally, he has held leadership capacities in conferences such as WWW, NIPS, ICML, IJCAI, AAAI, and ICONIP. Presently, Professor King continues to serve as the Vice-President of the ACM SIGWEB, the Vice-President of the WebConf Steering Committee, and a board member of the International Neural Network Society (INNS) and Asia Pacific Neural Network Society (APNNS).",
                     "Professor King has received numerous prestigious awards for his contributions to the field of machine intelligence. Notable accolades include the 2021 INNS Dennis Gabor Award for engineering applications of neural networks, the 2020 APNNS Outstanding Achievement Award, and several Test of Time Awards from ACM conferences such as CIKM2019, SIGIR 2020, and WSDM 2022. During his sabbatical leave at AT&T Labs Research in San Francisco, he was a Visiting Professor and taught classes at UC Berkeley.",
                     "Presently, Professor King is the Director of the Centre for Learning Innovation and Technology (ELITE), dedicated to promoting eLearning through education technology. Additionally, he oversees the Machine Intelligence and Social Computing (MISC) Lab, which conducts research in machine learning-related fields.",
-                    "Professor King holds a Bachelor of Science degree in Engineering and Applied Science from the California Institute of Technology (Caltech) and obtained his Master of Science and Doctor of Philosophy degrees in Computer Science from the University of Southern California (USC)."
+                    "Professor King holds a B.Sc. degree in Engineering and Applied Science from the California Institute of Technology (Caltech) and obtained his M.Sc. and Ph.D. degrees in Computer Science from the University of Southern California (USC)."
                 ],
-                img: "assets/img/Irwin-King.jpg",
+                img: "assets/img/people/Irwin-King.jpg",
                 links: {
                     homepage: "#",
                     scholar: "https://scholar.google.com/citations?user=MXvC7tkAAAAJ&hl=en",
@@ -112,7 +120,7 @@ const retaiData = {
                     "His research interests focus on machine learning theory and applications, specifically scientific AI (AI for Science) and trustworthy AI. His breadth of expertise covers multimodal learning, time series analysis, graph neural networks, large language models, federated learning, and privacy computing.",
                     "Professor Xu has published over 200 peer-reviewed papers in top-tier journals and conferences such as IEEE TPAMI, TKDE, TNNLS, NeurIPS, and ICML, with over 11,000 citations on Google Scholar. He is an Executive Editor for the journal Neural Networks and serves in leadership roles for the International Neural Network Society (INNS)."
                 ],
-                img: "assets/img/Zenglin Xu.png",
+                img: "assets/img/people/Zenglin Xu.png",
                 links: {
                     homepage: "https://xuzenglin.github.io/",
                     scholar: "https://scholar.google.com/citations?user=gF0H9nEAAAAJ&hl=zh-CN",
