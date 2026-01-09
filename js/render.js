@@ -336,46 +336,82 @@ function renderTeamPage() {
 
     const container = get('all-team');
     if (container) {
-        // Reuse the logic from home but maybe formatted differently? 
-        // For simplicity, we use similar grid layout.
-
-        // PIs
+        // PIs - Detailed View (Same as Home)
         let piCards = retaiData.team.pi.map(p => `
-            <div class="col-md-6 mb-4">
-                 <div class="card person-card">
-                    <div class="person-avatar">
-                        <svg width="50" height="50" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                        </svg>
+            <div class="row mb-5 border-bottom pb-5">
+                <!-- Left Sidebar -->
+                <div class="col-md-3 bg-light p-4 rounded-3 h-100">
+                    <img src="${p.img}" alt="${p.name}" class="img-fluid rounded mb-3" style="width: 100%; object-fit: cover;">
+                    <h5 class="text-primary fw-bold mb-2">${p.name}</h5>
+                    <div class="small text-muted mb-3">${p.role}</div>
+                    
+                    ${p.contact ? `
+                    <div class="small mb-3">
+                        ${p.contact.phone ? `
+                        <div class="fw-bold">Call:</div> 
+                        <div>${p.contact.phone}</div>
+                        ` : ''}
+                        ${p.contact.email ? `
+                        <div class="fw-bold mt-2">Email:</div> 
+                        <a href="mailto:${p.contact.email}">${p.contact.email}</a>
+                        ` : ''}
+                        ${p.contact.address ? `
+                        <div class="fw-bold mt-2">Address:</div> 
+                        <div>${p.contact.address}</div>
+                        ` : ''}
                     </div>
-                    <h5>${p.name}</h5>
-                    <p class="person-role">${p.role}</p>
-                    <div class="person-links">
-                        <a href="${p.links.email}">Email</a>
-                        <a href="${p.links.homepage}">Home</a>
-                        <a href="${p.links.scholar}">Scholar</a>
+                    ` : ''}
+                    
+                    <div class="d-flex gap-2">
+                         ${p.links.linkedin ? `<a href="${p.links.linkedin}" class="d-inline-block"><img src="assets/img/logo/linked_icon.jpg" alt="LinkedIn" style="width: 48px; height: 48px; border-radius: 4px;"></a>` : ''}
+                         ${p.links.scholar ? `<a href="${p.links.scholar}" class="d-inline-block"><img src="assets/img/logo/google_scholar.jpg" alt="Google Scholar" style="width: 48px; height: 48px; border-radius: 4px;"></a>` : ''}
                     </div>
-                 </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-9 ps-md-4 pt-3 pt-md-0">
+                    <h2 class="fw-bold text-dark mb-1">${p.name}</h2>
+                    <div class="text-secondary small mb-3">${p.role.replace(/<br>/g, ', ')}</div>
+                    <div class="mb-3 text-secondary">Department of Computer Science and Engineering The Chinese University of Hong Kong</div>
+
+                    ${p.detailedRoles ? `
+                    <ul class="mb-4">
+                        ${p.detailedRoles.map(role => `<li>${role}</li>`).join('')}
+                    </ul>
+                    ` : ''}
+
+                    ${p.links.cv ? `<a href="${p.links.cv}" class="text-decoration-none fw-bold mb-4 d-inline-block">Download Full CV</a>` : ''}
+
+                    ${p.bio ? `
+                    <h3 class="h4 text-primary mt-2">Biography</h3>
+                    ${p.bio.map(para => `<p>${para}</p>`).join('')}
+                    ` : ''}
+                </div>
             </div>
         `).join('');
 
+        // Students - Grid View (Same as Home)
         let studentGroups = retaiData.team.students.map(group => `
             <h3 class="mt-5 mb-4 border-bottom pb-2">${group.groupname}</h3>
             <div class="row">
                 ${group.members.map(m => `
                     <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="person-card">
-                             <div class="person-avatar">
-                                <svg width="40" height="40" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                                </svg>
+                        <div class="person-card p-3">
+                             <div class="person-avatar mx-auto mb-3" style="width: 80px; height: 80px; overflow: hidden; border-radius: 50%;">
+                                ${m.img ?
+                `<img src="${m.img}" alt="${m.name}" style="width: 100%; height: 100%; object-fit: cover;">` :
+                `<div class="bg-light d-flex align-items-center justify-content-center h-100">
+                                        <svg width="40" height="40" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#adb5bd">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                        </svg>
+                                    </div>`
+            }
                              </div>
-                             <h5 class="mb-1">${m.name}</h5>
+                             <h6 class="mb-1">${m.name}</h6>
                              <p class="person-role small mb-2">${m.role}</p>
-                             <div class="person-links">
-                                <a href="${m.links.homepage}">Homepage</a>
+                             <div class="person-links small">
+                                <a href="${m.links.homepage}">Web</a>
                              </div>
                         </div>
                     </div>
@@ -385,11 +421,10 @@ function renderTeamPage() {
 
         container.innerHTML = `
             <div class="container">
-                <h2 class="section-title mb-4">Our Team</h2>
-                <h3 class="mb-4 border-bottom pb-2">Principal Investigators</h3>
-                <div class="row">
-                    ${piCards}
-                </div>
+                <h2 class="section-title mb-5">Principal Investigators</h2>
+                ${piCards}
+                
+                <h2 class="section-title mt-5 pt-4">Student Team</h2>
                 ${studentGroups}
             </div>
         `;
