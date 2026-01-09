@@ -57,7 +57,7 @@ const retaiData = {
         pi: [
             {
                 name: "Prof. Irwin King",
-                role: "Professor, Department of Computer Science & Engineering, CUHK",
+                role: "B.Sc. (Caltech), M.Sc., Ph.D. (USC)<br>Pro-Vice-Chancellor (Education)<br>Professor<br>Fellow of ACM, Fellow of IEEE, Fellow of INNS, Fellow of AAIA, Fellow of HKIE",
                 img: "assets/img/placeholder_king.png",
                 links: { homepage: "#", scholar: "#", email: "#" }
             },
